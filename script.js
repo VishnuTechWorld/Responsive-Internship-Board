@@ -6,7 +6,7 @@
 
 let internships = [];
 
-const API_URL = "https://probable-space-parakeet-j66g7576qxjhppwg-3000.app.github.dev/api/internships";
+const API_URL = "https://YOUR-RENDER-URL.onrender.com/api/internships";
 
 // HTML Elements
 const grid = document.querySelector("#job-grid");
