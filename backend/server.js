@@ -1,10 +1,18 @@
 
+const cors = require("cors");
 const express = require("express");
 const app = express();
 
 require("./database");
+app.use(cors({
+    origin: "https://probable-space-parakeet-j66g7576qxjhppwg-5500.app.github.dev",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
+app.options(/.*/, cors());
 app.use(express.json());
+
 
 // Home API
 app.get("/", (req, res) => {
