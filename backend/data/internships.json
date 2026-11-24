@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Frontend Developer Intern",
+    "company": "Tech Solutions",
+    "domain": "Web Development",
+    "mode": "Remote",
+    "duration": "3 months",
+    "stipend": 12000,
+    "description": "Work on responsive websites using HTML, CSS and JavaScript."
+  },
+  {
+    "title": "Python Developer Intern",
+    "company": "Code Labs",
+    "domain": "Python",
+    "mode": "Hybrid",
+    "duration": "2 months",
+    "stipend": 8000,
+    "description": "Learn Python programming and backend development."
+  },
+  {
+    "title": "Machine Learning Intern",
+    "company": "AI Innovations",
+    "domain": "AI/ML",
+    "mode": "Remote",
+    "duration": "3 months",
+    "stipend": 10000,
+    "description": "Work on machine learning models and data analysis."
+  }
+]
