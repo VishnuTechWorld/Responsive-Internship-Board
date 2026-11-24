@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find internships that move your career forward. Search roles by skill, domain, and work mode.">
+  <title>Internly — Find your next opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span>✦</span> Your next big opportunity starts here <b>Explore 2026 roles</b></div>
+  <header class="header">
+    <a class="logo" href="#" aria-label="Internly home"><span class="logo-icon">i</span> internly<span class="dot">.</span></a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a class="selected" href="#explore">Explore jobs</a>
+      <a href="#how">How it works</a>
+      <a href="#tips">Career tips</a>
+    </nav>
+    <div class="header-right">
+      <a class="signin" href="#explore">Sign in</a>
+      <a class="header-cta" href="#explore">Find an internship <span>↗</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> THE START OF SOMETHING GREAT</div>
+        <h1>Big dreams.<br><span>Real experience.</span></h1>
+        <p class="hero-text">Find internships that help you learn, grow, and turn your potential into a career you love.</p>
+        <div class="hero-buttons">
+          <a class="primary-btn" href="#explore">Explore opportunities <span>→</span></a>
+          <a class="text-btn" href="#how"><span class="play">▶</span> How it works</a>
+        </div>
+        <div class="social-proof">
+          <div class="avatar-stack"><span>AK</span><span>RS</span><span>MP</span><span>+</span></div>
+          <div><strong>10,000+ students</strong><small>taking their first career step</small></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of career growth">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-card card-float">
+          <div class="mini-label">YOUR NEXT CHAPTER</div>
+          <div class="mini-title">Make it happen.</div>
+          <div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="mini-foot"><span>Growth</span><b>↑ 100%</b></div>
+        </div>
+        <div class="floating-tag tag-top"><span class="tag-icon">✦</span> New roles weekly</div>
+        <div class="floating-tag tag-bottom"><span class="check">✓</span> Your future looks bright</div>
+        <div class="art-plant"><i></i><i></i><i></i><i></i><div></div></div>
+      </div>
+    </section>
+
+    <section class="search-wrap" id="explore">
+      <div class="search-heading"><div><span class="section-kicker">FIND YOUR FIT</span><h2>Find an internship</h2></div><span class="live-count"><i></i> Fresh opportunities</span></div>
+      <div class="search-panel">
+        <label class="search-field"><span class="field-icon">⌕</span><span class="sr-only">Search internships</span><input id="search-input" type="search" placeholder="Role, company, or keyword..." autocomplete="off"></label>
+        <label class="select-field"><span class="field-icon">▦</span><span class="sr-only">Choose domain</span><select id="domain-filter"><option value="all">All domains</option><option>Web Development</option><option>Python</option><option>AI / ML</option><option>Data Science</option><option>UI / UX Design</option><option>Marketing</option></select></label>
+        <label class="select-field mode-select"><span class="field-icon">⌖</span><span class="sr-only">Choose work mode</span><select id="mode-filter"><option value="all">Any work mode</option><option>Remote</option><option>Hybrid</option><option>On-site</option></select></label>
+        <button class="search-button" id="search-button">Search jobs <span>→</span></button>
+      </div>
+      <div class="filter-row">
+        <div class="quick-filters"><span>Popular:</span><button class="chip active" data-quick="all">All roles</button><button class="chip" data-quick="Remote">Remote</button><button class="chip" data-quick="Paid">Paid</button><button class="chip" data-quick="Python">Python</button></div>
+        <button class="clear-btn" id="clear-filters">Clear filters <span>↺</span></button>
+      </div>
+    </section>
+
+    <section class="listings">
+      <div class="listings-heading"><div><span class="section-kicker">HANDPICKED FOR YOU</span><h2>Explore opportunities<span class="heading-dot">.</span></h2><p>Start small. Learn big. Find the role that feels right.</p></div><div class="sort-wrap"><label for="sort-select">Sort by</label><select id="sort-select"><option value="recommended">Recommended</option><option value="newest">Newest first</option><option value="stipend">Highest stipend</option></select></div></div>
+      <div class="results-meta"><span id="result-count" aria-live="polite">Showing 6 opportunities</span><span>Updated regularly <b>·</b> Free to explore</span></div>
+      <div class="job-grid" id="job-grid"></div>
+      <div class="empty-state" id="empty-state" hidden><div class="empty-icon">⌕</div><h3>No internships found</h3><p>Try a different keyword or clear your filters to see more opportunities.</p><button class="primary-btn" id="empty-clear">Clear all filters <span>↗</span></button></div>
+      <div class="load-row"><button class="outline-btn" id="load-more">Load more opportunities <span>↓</span></button></div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="how-intro"><span class="section-kicker">YOUR JOURNEY, SIMPLIFIED</span><h2>From curious to<br><span>career-ready.</span></h2><p>Three simple steps between where you are and where you want to be.</p></div>
+      <div class="steps">
+        <article class="step"><div class="step-number">01</div><div class="step-icon purple">⌕</div><h3>Discover</h3><p>Explore opportunities that match your interests, skills, and ambitions.</p></article>
+        <article class="step"><div class="step-number">02</div><div class="step-icon orange">↗</div><h3>Apply</h3><p>Find the right fit and take the first step with a confident application.</p></article>
+        <article class="step"><div class="step-number">03</div><div class="step-icon green">✦</div><h3>Grow</h3><p>Build real-world skills, learn from teams, and make your next move.</p></article>
+      </div>
+    </section>
+
+    <section class="bottom-cta" id="tips"><div><span class="section-kicker">YOUR NEXT CHAPTER STARTS NOW</span><h2>Ready to make<br>something happen?</h2><p>The experience you want is one search away.</p></div><a class="light-btn" href="#explore">Find your internship <span>↗</span></a><div class="cta-decoration">✳</div></section>
+  </main>
+
+  <footer class="footer"><a class="logo" href="#"><span class="logo-icon">i</span> internly<span class="dot">.</span></a><p>Made for the next generation of doers.</p><span>© 2026 Internly. Demo project.</span></footer>
+
+  <dialog class="details-dialog" id="details-dialog">
+    <button class="dialog-close" id="dialog-close" aria-label="Close details">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
