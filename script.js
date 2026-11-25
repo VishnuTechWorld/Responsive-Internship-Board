@@ -6,7 +6,7 @@
 
 let internships = [];
 
-const API_URL = "https://YOUR-RENDER-URL.onrender.com/api/internships";
+const API_URL = "https://responsive-internship-api-jk2c.onrender.com/api/internships";
 
 // HTML Elements
 const grid = document.querySelector("#job-grid");
